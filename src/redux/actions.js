@@ -1,6 +1,6 @@
 import { generateKeyPairSync } from "crypto"
 
-const url = "https://developers.zomato.com/api/v2.1/geocode?lat=30.267153&lon=-97.743057"
+const url = "https://developers.zomato.com/api/v2.1/geocode?lat=30.267153&lon=-97.743057";
 
 export const addCar = (car) => {
     return {
@@ -13,7 +13,7 @@ export const removeCar = (index) => {
     return {
         type: 'REMOVE_CAR',
         value: index
-    }
+    } 
 }
 
 export const fetchBusiness = () => {

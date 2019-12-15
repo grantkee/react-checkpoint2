@@ -2,14 +2,14 @@ import { combineReducers } from 'redux'
 
 const user = (state = null) => state
 
-const cars = (state = [], action) => {
+const restaurants = (state = [], action) => {
     switch(action.type) {
-        case 'ADD_CAR':
+        case 'ADD_RESTAURANT':
             return [ ...state, action.value ]
-        case 'REMOVE_CAR':
-            const cars = [ ...state ]
-            cars.splice(action.value, 1)
-            return cars
+        case 'REMOVE_RESTAURANT':
+            const restaurants = [ ...state ]
+            restaurants.splice(action.value, 1)
+            return restaurants
         default:
             return state
     }
