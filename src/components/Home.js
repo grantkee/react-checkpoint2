@@ -19,6 +19,7 @@ const Home = ( props ) => {
                     <Divider />
                     <CardActions style={{ color: 'mediumblue' }}>
                         <Link to={`/restaurant/${r.id}`}>See More Details</Link>
+                        <Link to={`/map/${r.id}`}>Map</Link>
                     </CardActions>
                 </Card>
             ))}

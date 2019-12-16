@@ -2,7 +2,19 @@ import { generateKeyPairSync } from "crypto"
 
 const url = "https://developers.zomato.com/api/v2.1/geocode?lat=30.267153&lon=-97.743057";
 
-// export const loggedIn = ()
+export const loggedIn = () => {
+    return {
+        type: 'LOG_IN',
+        value: true
+    }
+}
+
+export const loggedOut = () => {
+    return {
+        type: 'LOG_OUT',
+        value: false
+    }
+}
 
 export const addRestaurant = (restaurant) => {
     return {
@@ -18,24 +30,24 @@ export const removeRestaurant = (index) => {
     } 
 }
 
-export const fetchBusiness = () => {
-    return( dispatch ) => {
-        fetch(url)
-        .then(res => res.json())
-        .then(response => {
-            const action = {
-                type: 'FETCH_MAKES',
-                value: response.Results
-            }
-            dispatch(action)
-        })
-        .catch(error => console.log(error))
-    }
-}
+// export const fetchBusiness = () => {
+//     return( dispatch ) => {
+//         fetch(url)
+//         .then(res => res.json())
+//         .then(response => {
+//             const action = {
+//                 type: 'FETCH_MAKES',
+//                 value: response.Results
+//             }
+//             dispatch(action)
+//         })
+//         .catch(error => console.log(error))
+//     }
+// }
 
-export const deleteMake = ( index ) => {
-    return {
-        type: 'REMOVE_MAKE',
-        value: index
-    }
-}
+// export const deleteMake = ( index ) => {
+//     return {
+//         type: 'REMOVE_MAKE',
+//         value: index
+//     }
+// }

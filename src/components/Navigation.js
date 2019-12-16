@@ -1,10 +1,11 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, 
     Typography } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 
-const Navigation = () => {
+let login = false;
+
+const Navigation = ( props ) => {
     return (
         <AppBar position="relative">
             <Toolbar>
@@ -23,7 +24,6 @@ const Navigation = () => {
                             document.cookie = "loggedIn="
                             window.location.replace("/login")
                         }}>
-                        Login
                     </li>
                 </ul>
             </Toolbar>
