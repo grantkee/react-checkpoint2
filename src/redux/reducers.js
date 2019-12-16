@@ -1,10 +1,7 @@
 import { combineReducers } from 'redux'
+import initialState from './store'
 
-const initialState = {
-    auth: { loggedIn: false}
-}
-
-const login = (state = initialState, action) => {
+const user = (state = null, action) => {
     switch(action.type){
         case "LOG_IN":
             return {...state, auth: { loggedIn: true}};
@@ -41,4 +38,4 @@ const restaurants = (state = [], action) => {
 //     }
 // }
 
-export default combineReducers({ initialState, login, restaurants })
+export default combineReducers({ initialState, user, restaurants })

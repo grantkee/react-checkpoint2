@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 function App() {
+  console.log("hii " + process.env.REACT_APP_GOOGLE_MAP_API_KEY)
   return (
     <Provider store={store}>
       <BrowserRouter>

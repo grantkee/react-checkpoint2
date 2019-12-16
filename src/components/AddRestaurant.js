@@ -14,6 +14,7 @@ class AddRestaurant extends Component {
         address: '',
         cuisine: '',
         averageCostForTwo: '',
+        hours: ''
     }
 
     toggleDialog = () => this.setState({ open: !this.state.open })
@@ -88,6 +89,12 @@ class AddRestaurant extends Component {
                                     id="averageCostForTwo" 
                                     placeholder="Average Cost for Two" 
                                     value={this.state.averageCostForTwo} 
+                                    onChange={this.handleTextChange} 
+                                    required />
+                                <TextField 
+                                    id="hours" 
+                                    placeholder="Hours of Operation" 
+                                    value={this.state.hours} 
                                     onChange={this.handleTextChange} 
                                     required />
                                 <br />

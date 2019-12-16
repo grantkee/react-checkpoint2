@@ -1,20 +1,21 @@
-import React from 'react';
 import { connect } from 'react-redux'
 import Navigation from '../components/Navigation'
-// import { logout } from '../redux/actions'
+import { login, logout } from '../redux/actions'
 
 
 const mapStateToProps = ( state ) => {
     return {
-		user: state.user
+    user: state.user,
+    login: state.login
     }
 }
 
 
-// const mapDispatchToProps = ( dispatch ) => {
-//     return {
-//         logout: ( ) => dispatch( logout( ) )
-//     }
-// }
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        login: (username) => dispatch(login(username)),
+        logout: ( ) => dispatch( logout( ) )
+    }
+}
 
 export default connect( mapStateToProps, mapDispatchToProps )(Navigation)
