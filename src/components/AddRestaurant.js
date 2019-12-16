@@ -30,8 +30,6 @@ class AddRestaurant extends Component {
         const payload = { ...this.state }
         payload.id = this.props.carTotal + 1
         delete payload.open
-        // add this.props.AddRestaurant function here
-        // also add this.setState to close the dialog
         this.props.addRestaurant(payload)
         this.setState({ open: false })
     }
@@ -108,4 +106,4 @@ class AddRestaurant extends Component {
     }
 }
 
-export default AddRestaurant
+export default AddRestaurant;
