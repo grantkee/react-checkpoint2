@@ -2,16 +2,18 @@ import { generateKeyPairSync } from "crypto"
 
 const url = "https://developers.zomato.com/api/v2.1/geocode?lat=30.267153&lon=-97.743057";
 
-export const addCar = (car) => {
+// export const loggedIn = ()
+
+export const addRestaurant = (restaurant) => {
     return {
-        type: 'ADD_CAR',
-        value: car
+        type: 'ADD_RESTAURANT',
+        value: restaurant
     }
 }
 
-export const removeCar = (index) => {
+export const removeRestaurant = (index) => {
     return {
-        type: 'REMOVE_CAR',
+        type: 'REMOVE_RESTAURANT',
         value: index
     } 
 }

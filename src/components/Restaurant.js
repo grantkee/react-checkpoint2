@@ -1,8 +1,9 @@
 import React from 'react'
 import { Container, Paper, Chip } from '@material-ui/core';
-import restaurants from '../restaurants.json';
+// import restaurants from '../redux/state.js'
 
 const Restaurant = (props) => {
+    
     const id = props.match.params.id
 
     const restaurant = props.restaurants.find(r => r.id == id)
@@ -21,4 +22,4 @@ const Restaurant = (props) => {
     )
 }
 
-export default Restaurant
+export default Restaurant;

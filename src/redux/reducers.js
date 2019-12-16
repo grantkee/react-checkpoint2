@@ -28,4 +28,4 @@ const makes = (state = [], action) => {
     }
 }
 
-export default combineReducers({ user, cars, makes })
+export default combineReducers({ user, restaurants, makes })
