@@ -2,14 +2,14 @@ import { generateKeyPairSync } from "crypto"
 
 const url = "https://developers.zomato.com/api/v2.1/geocode?lat=30.267153&lon=-97.743057";
 
-export const loggedIn = () => {
+export const login = () => {
     return {
         type: 'LOG_IN',
         value: true
     }
 }
 
-export const loggedOut = () => {
+export const logout = () => {
     return {
         type: 'LOG_OUT',
         value: false

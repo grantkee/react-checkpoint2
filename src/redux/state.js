@@ -1,12 +1,12 @@
 export default {
     user: {
-        username: 'test-user-1',
-        email: 'test-user@example.com',
+        username: 'testUser',
+        email: 'testuser@foo.com',
         loggedIn: false
     },
     restaurants: [
         {
-          
+          //delete apiKey
             "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16913359",
             "name": "Moonshine Patio Bar & Grill",

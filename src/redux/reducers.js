@@ -1,12 +1,16 @@
 import { combineReducers } from 'redux'
 import initialState from './store'
 
-const user = (state = null, action) => {
+const user = (state = [], action) => {
     switch(action.type){
         case "LOG_IN":
-            return {...state, auth: { loggedIn: true}};
+            return Object.assign({}, state, {
+                loggedIn: action.value
+            });
         case "LOG_OUT":
-            return {...state, auth: { loggedIn: false }};
+            return Object.assign({}, state, {
+                loggedIn: action.value
+            })
         default:
             return state;
     }
