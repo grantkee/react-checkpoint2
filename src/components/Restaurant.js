@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, Paper, Chip } from '@material-ui/core';
 import GoogleMapReact from "google-map-react";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+
 
 
 const Restaurant = (props) => {
@@ -9,20 +10,11 @@ const Restaurant = (props) => {
     const id = props.match.params.id
 
     const restaurant = props.restaurants.find(r => r.id == id)
+    console.log(restaurant.location)
 
-    const AnyReactComponent = ({ text }) => (
-        <div>
-          <LocationOnIcon className="text-red" />
-        </div>
-      );
-    
-      const defaultProps = {
-        center: {
-          lat: restaurant.location.latitude,
-          lng: restaurant.location.longitude
-        },
-        zoom: 11
-      };
+    const [center, setCenter] = useState({ lat: 30.2672, lng: 97.7431});
+
+    const [zoom, setZoom] = useState(11);
 
     return (
         <>
@@ -31,19 +23,19 @@ const Restaurant = (props) => {
                 <h2>{restaurant.name}</h2>
                 {
                     Object.keys(restaurant).map((key, idx) => {
-                        return <Chip label={`${key}: ${restaurant[key]}`}></Chip>
+                        return <Chip key={idx} label={`${key}: ${restaurant[key]}`}></Chip>
                     })
                 }
             </Paper>
         </Container>
         <Container style={{ height: "400px", width: "450px" }}>
             <GoogleMapReact
-                bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
-                center={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
+                bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_KEY }}
+                center={center}
+                defaultZoom={zoom}
                 yesIWantToUseGoogleMapApiInternals
             >
-                <AnyReactComponent lat={restaurant.location.latitude} lng={restaurant.location.longitude} />
+                <LocationOnIcon lat={restaurant.location.latitude} lng={restaurant.location.longitude} />
             </GoogleMapReact>
         </Container>
         </>

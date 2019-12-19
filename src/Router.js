@@ -5,7 +5,6 @@ import Home from './containers/Home';
 import Login from './components/Login';
 import Restaurant from './containers/Restaurant';
 import AddRestaurant from './containers/AddRestaurant';
-import Map from './components/Map';
 
 const checkAuth = () => {
     const cookies = cookie.parse(document.cookie)
@@ -29,8 +28,7 @@ const Router = () => {
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/restaurant/:id" component={Restaurant} />
-            <Route path='/map/:id' component={Map} />
-            <ProtectedRoute exact path="/add-restaurant" component={AddRestaurant} />
+            <Route exact path="/add-restaurant" component={AddRestaurant} />
         </Switch>
     );
 };

@@ -4,15 +4,14 @@ import { login, logout } from '../redux/actions';
 
 const mapStateToProps = (state) => {
     return {
-        user: state.user,
-        login: state.login
+        user: state.user
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        login: (username) => dispatch(login(username)),
-        logout: (user) => dispatch(logout(user))
+        login: () => dispatch(login()),
+        logout: () => dispatch(logout())
     }
 }
 

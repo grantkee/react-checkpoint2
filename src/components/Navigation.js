@@ -4,7 +4,7 @@ import { AppBar, Toolbar, IconButton,
 import { Link } from 'react-router-dom'
 
 const Navigation = ( props ) => {
-    let login = props.user
+    console.log(props)
     return (
         <AppBar position="relative">
             <Toolbar>
@@ -27,6 +27,7 @@ const Navigation = ( props ) => {
                     </li>
                 </ul>
             </Toolbar>
+                    <Toolbar>{props.user.loggedIn ? props.user.username : 'Logged Out'}</Toolbar>
         </AppBar>
     )
 }
