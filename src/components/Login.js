@@ -27,7 +27,7 @@ import {
 
 //   render() {
 
-const App = (props) => {
+const Login = (props) => {
 
     return (
       <div className="App">
@@ -62,4 +62,4 @@ const App = (props) => {
     );
 };
 
-export default App; 
+export default Login; 

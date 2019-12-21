@@ -28,7 +28,7 @@ const Router = () => {
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/restaurant/:id" component={Restaurant} />
-            <Route exact path="/add-restaurant" component={AddRestaurant} />
+            <ProtectedRoute path="/add-restaurant" component={AddRestaurant} />
         </Switch>
     );
 };

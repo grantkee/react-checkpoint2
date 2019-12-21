@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Container, Paper, Chip } from '@material-ui/core';
 import GoogleMapReact from "google-map-react";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-
+import { Link } from 'react-router-dom'
 
 
 const Restaurant = (props) => {
@@ -38,6 +38,9 @@ const Restaurant = (props) => {
             >
                 <LocationOnIcon lat={restaurant.location.latitude} lng={restaurant.location.longitude} />
             </GoogleMapReact>
+            <Link to='/'>
+                <button>Back</button>
+            </Link> 
             <br />
         </Container>
         </>
