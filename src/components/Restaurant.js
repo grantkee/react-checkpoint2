@@ -10,11 +10,11 @@ const Restaurant = (props) => {
     const id = props.match.params.id
 
     const restaurant = props.restaurants.find(r => r.id == id)
-    console.log(restaurant.location)
+    console.log('number here ' + parseFloat(restaurant.location.latitude))
 
-    const [center, setCenter] = useState({ lat: 30.2672, lng: 97.7431});
+    const [center, setCenter] = useState({ lat: parseFloat(restaurant.location.latitude), lng: parseFloat(restaurant.location.longitude)});
 
-    const [zoom, setZoom] = useState(11);
+    const [zoom, setZoom] = useState(14);
 
     return (
         <>
@@ -28,7 +28,8 @@ const Restaurant = (props) => {
                 }
             </Paper>
         </Container>
-        <Container style={{ height: "400px", width: "450px" }}>
+        <br />
+        <Container style={{ height: "400px", width: "550px" }}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_KEY }}
                 center={center}
@@ -37,6 +38,7 @@ const Restaurant = (props) => {
             >
                 <LocationOnIcon lat={restaurant.location.latitude} lng={restaurant.location.longitude} />
             </GoogleMapReact>
+            <br />
         </Container>
         </>
     )
