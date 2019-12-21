@@ -6,8 +6,6 @@ export default {
     },
     restaurants: [
         {
-          //delete apiKey
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16913359",
             "name": "Moonshine Patio Bar & Grill",
             "url": "https://www.zomato.com/austin/moonshine-patio-bar-grill-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -63,7 +61,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16912394",
             "name": "Clay Pit",
             "url": "https://www.zomato.com/austin/clay-pit-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -119,7 +116,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16915865",
             "name": "Franklin Barbecue",
             "url": "https://www.zomato.com/austin/franklin-barbecue-rosewood?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -175,7 +171,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16912573",
             "name": "Eddie V's Prime Seafood",
             "url": "https://www.zomato.com/austin/eddie-vs-prime-seafood-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -231,7 +226,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16913120",
             "name": "Lamberts Downtown Barbecue",
             "url": "https://www.zomato.com/austin/lamberts-downtown-barbecue-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -287,7 +281,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16913976",
             "name": "Stubb's Bar-B-Q",
             "url": "https://www.zomato.com/austin/stubbs-bar-b-q-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -343,7 +336,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16915864",
             "name": "24 Diner",
             "url": "https://www.zomato.com/austin/24-diner-clarksville?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -399,7 +391,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16914342",
             "name": "Whole Foods Market",
             "url": "https://www.zomato.com/austin/whole-foods-market-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -455,7 +446,6 @@ export default {
           },
         {
           
-            "apikey": "35a682300a56ae642fad712ac5b65df1",
             "id": "16915533",
             "name": "La Condesa",
             "url": "https://www.zomato.com/austin/la-condesa-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",

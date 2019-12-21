@@ -4,7 +4,8 @@ import {
   TextField,
   Button,
   Container
-} from '@material-ui/core'
+} from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 // class App extends Component {
 //   state = {
@@ -49,6 +50,7 @@ const Login = (props) => {
               name="password"
               label="Password"
               type="password" />
+          <Link to={'/'}>
             <Button
               type="submit"
               className="login-button"
@@ -56,6 +58,7 @@ const Login = (props) => {
               color="primary"
               onClick={()=>props.login()}
               >Login</Button>
+          </Link>
           </form>
         </Container>
       </div>

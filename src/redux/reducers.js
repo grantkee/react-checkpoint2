@@ -21,8 +21,11 @@ const restaurants = (state = [], action) => {
         case 'ADD_RESTAURANT':
             return [ ...state, action.value ]
         case 'REMOVE_RESTAURANT':
+            let confirm = window.confirm('Are you sure you want to delete this?')
             const restaurants = [ ...state ]
-            restaurants.splice(action.value, 1)
+            if (confirm){
+                restaurants.splice(action.value, 1)
+            }
             return restaurants
         default:
             return state

@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import cookie from 'cookie';
 import Home from './containers/Home';
-import Login from './components/Login';
+import Login from './containers/Login';
 import Restaurant from './containers/Restaurant';
 import AddRestaurant from './containers/AddRestaurant';
 
