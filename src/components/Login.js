@@ -19,9 +19,6 @@ import { Link } from 'react-router-dom';
 //     this.setState(state)
 //   }
 
-//   login = (e) => {
-//     e.preventDefault()
-//    document.cookie = "loggedIn=true;max-age=60*1000";
 
 //     window.location.replace("/")
 //   }
@@ -29,6 +26,11 @@ import { Link } from 'react-router-dom';
 //   render() {
 
 const Login = (props) => {
+
+  // const login = (e) => {
+  //   e.preventDefault()
+  //  document.cookie = "loggedIn=true;max-age=60*1000";
+  // }
 
     return (
       <div className="App">
