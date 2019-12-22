@@ -11,13 +11,9 @@ class AddRestaurant extends Component {
     state = {
         open: false,
         name: '',
-        location: {
-            address: ''
-        },
-        user_rating: {
-            aggregate_rating: ''
-        },
-        cuisine: '',
+        address: '',
+        aggregate_rating: '',
+        cuisines: '',
         average_cost_for_two: ''
     }
 
@@ -42,9 +38,8 @@ class AddRestaurant extends Component {
         if (prevState.open !== this.state.open) {
             this.setState({
                 name: '',
-                location: {
-                    address: ''
-                },
+                address: '',
+                aggregate_rating: '',
                 cuisines: '',
                 average_cost_for_two: ''
             })
@@ -80,17 +75,17 @@ class AddRestaurant extends Component {
                                 <TextField 
                                     id="address" 
                                     placeholder="Address" 
-                                    value={this.state.location.address} 
+                                    value={this.state.address} 
                                     onChange={this.handleTextChange} 
                                     required />
                                 <TextField 
-                                    id="rating" 
+                                    id="aggregate_rating" 
                                     placeholder="Personal Rating" 
-                                    value={this.state.user_rating.aggregate_rating} 
+                                    value={this.state.aggregate_rating} 
                                     onChange={this.handleTextChange} 
                                     required />
                                 <TextField 
-                                    id="cuisine" 
+                                    id="cuisines" 
                                     placeholder="Type of Cuisine" 
                                     value={this.state.cuisines} 
                                     onChange={this.handleTextChange} 

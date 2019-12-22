@@ -7,17 +7,17 @@ import { Link } from 'react-router-dom'
 
 const Restaurant = (props) => {
     
-    const id = props.match.params.id
+    const id = props.match.params.id;
 
-    const restaurant = props.restaurants.find(r => r.id == id)
-    console.log('number here ' + parseFloat(restaurant.location.latitude))
+    const restaurant = props.restaurants.find(r => r.id == id);
 
-    const [center, setCenter] = useState({ lat: parseFloat(restaurant.location.latitude), lng: parseFloat(restaurant.location.longitude)});
+    const [center, setCenter] = useState({ lat: parseFloat(restaurant.latitude), lng: parseFloat(restaurant.longitude)});
 
     const [zoom, setZoom] = useState(14);
 
     return (
         <>
+        {restaurant.latitude ? 
         <Container maxWidth="sm" className="restaurant-container">
             <Paper className="restaurant-paper">
                 <h2>{restaurant.name}</h2>
@@ -36,14 +36,18 @@ const Restaurant = (props) => {
                 defaultZoom={zoom}
                 yesIWantToUseGoogleMapApiInternals
             >
-                <LocationOnIcon lat={restaurant.location.latitude} lng={restaurant.location.longitude} />
+                <LocationOnIcon lat={restaurant.latitude} lng={restaurant.longitude} />
             </GoogleMapReact>
             <Link to='/'>
                 <button>Back</button>
-            </Link> 
+            </Link>
             <br />
-        </Container>
-        </>
+            </Container>
+
+    :
+    <div>Sorry, you need to log in.</div>
+    }
+    </>
     )
 }
 

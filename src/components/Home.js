@@ -7,12 +7,12 @@ const Home = ( props ) => {
     return (
         <div className="card-container">
             {props.restaurants.map((r, idx) => (
-                <Card key={r.id} className="card">
+                <Card key={idx} className="card">
                     <CardContent className="text-gray">
                         <span>{r.name}</span>
                         <ul>
-                            <li>Address: {r.location["address"]}</li>
-                            <li>Rating: {r.user_rating["aggregate_rating"]}</li>
+                            <li>Address: {r["address"]}</li>
+                            <li>Rating: {r["aggregate_rating"]}</li>
                             <li>Cusine: {r["cuisines"]}</li>
                             <li>Cost for 2: ${r["average_cost_for_two"]}</li>
                         </ul>
