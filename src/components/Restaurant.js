@@ -9,15 +9,25 @@ const Restaurant = (props) => {
     
     const id = props.match.params.id;
 
-    const restaurant = props.restaurants.find(r => r.id == id);
+    let restaurant = props.restaurants.find(r => r.id == id);
 
+    if(!restaurant){
+        restaurant = {
+            latitude: 30.2672,
+            
+            longitude: -97.7431
+        };
+    }
+    
     const [center, setCenter] = useState({ lat: parseFloat(restaurant.latitude), lng: parseFloat(restaurant.longitude)});
+    
 
     const [zoom, setZoom] = useState(14);
 
     return (
         <>
-        {restaurant.latitude ? 
+        {restaurant.id ? 
+        <Container>
         <Container maxWidth="sm" className="restaurant-container">
             <Paper className="restaurant-paper">
                 <h2>{restaurant.name}</h2>
@@ -43,11 +53,12 @@ const Restaurant = (props) => {
             </Link>
             <br />
             </Container>
-
-    :
-    <div>Sorry, you need to log in.</div>
-    }
+            </Container>
+        :
+            <div>Sorry, more details coming soon!</div>
+        }
     </>
+  
     )
 }
 
