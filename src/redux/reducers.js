@@ -12,7 +12,7 @@ const user = (state = [], action) => {
                 loggedIn: action.value
             })
         default:
-            return state;
+            return state
     }
 }
 
