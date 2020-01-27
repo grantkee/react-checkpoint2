@@ -12,9 +12,9 @@ class AddRestaurant extends Component {
         open: false,
         name: '',
         address: '',
-        cuisine: '',
-        averageCostForTwo: '',
-        hours: ''
+        aggregate_rating: '',
+        cuisines: '',
+        average_cost_for_two: ''
     }
 
     toggleDialog = () => this.setState({ open: !this.state.open })
@@ -39,8 +39,9 @@ class AddRestaurant extends Component {
             this.setState({
                 name: '',
                 address: '',
-                cuisine: '',
-                averageCostForTwo: ''
+                aggregate_rating: '',
+                cuisines: '',
+                average_cost_for_two: ''
             })
         }
     }
@@ -78,21 +79,21 @@ class AddRestaurant extends Component {
                                     onChange={this.handleTextChange} 
                                     required />
                                 <TextField 
-                                    id="cuisine" 
+                                    id="aggregate_rating" 
+                                    placeholder="Personal Rating" 
+                                    value={this.state.aggregate_rating} 
+                                    onChange={this.handleTextChange} 
+                                    required />
+                                <TextField 
+                                    id="cuisines" 
                                     placeholder="Type of Cuisine" 
-                                    value={this.state.cuisine} 
+                                    value={this.state.cuisines} 
                                     onChange={this.handleTextChange} 
                                     required />
                                 <TextField 
-                                    id="averageCostForTwo" 
+                                    id="average_cost_for_two" 
                                     placeholder="Average Cost for Two" 
-                                    value={this.state.averageCostForTwo} 
-                                    onChange={this.handleTextChange} 
-                                    required />
-                                <TextField 
-                                    id="hours" 
-                                    placeholder="Hours of Operation" 
-                                    value={this.state.hours} 
+                                    value={this.state.average_cost_for_two} 
                                     onChange={this.handleTextChange} 
                                     required />
                                 <br />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import cookie from 'cookie';
 import Home from './containers/Home';
-import Login from './components/Login';
+import Login from './containers/Login';
 import Restaurant from './containers/Restaurant';
 import AddRestaurant from './containers/AddRestaurant';
 
@@ -28,7 +28,7 @@ const Router = () => {
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/restaurant/:id" component={Restaurant} />
-            <Route exact path="/add-restaurant" component={AddRestaurant} />
+            <ProtectedRoute path="/add-restaurant" component={AddRestaurant} />
         </Switch>
     );
 };
