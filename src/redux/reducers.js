@@ -24,7 +24,9 @@ const restaurants = (state = [], action) => {
             let confirm = window.confirm('Are you sure you want to delete this?')
             const restaurants = [ ...state ]
             if (confirm){
-                restaurants.splice(action.value, 1)
+              let restaurant = restaurants.find(x => x.id === action.value)
+              let index = restaurants.indexOf(restaurant)
+              restaurants.splice(index, 1)
             }
             return restaurants
         default:

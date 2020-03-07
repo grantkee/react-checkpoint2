@@ -7,7 +7,7 @@ const Home = ( props ) => {
     return (
         <div className="card-container">
             {props.restaurants.map((r, idx) => (
-                <Card key={idx} className="card">
+                <Card key={r.id} className="card">
                     <CardContent className="text-gray">
                         <span>{r.name}</span>
                         <ul>
@@ -21,7 +21,7 @@ const Home = ( props ) => {
                     <CardActions style={{ color: 'mediumblue' }}>
                         <Link to={`/restaurant/${r.id}`}>See More Details </Link>
                         <p>or</p>
-                        {props.user.loggedIn ? <button onClick={() => props.removeRestaurant(idx)}>Delete</button> : <Link to='/login'>Log in to edit</Link>}
+                        {props.user.loggedIn ? <button onClick={() => props.removeRestaurant(r.id)}>Delete</button> : <Link to='/login'>Log in to edit</Link>}
                     </CardActions>
                 </Card>
             ))}

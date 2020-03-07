@@ -28,7 +28,7 @@ class AddRestaurant extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         const payload = { ...this.state }
-        payload.id = this.props.carTotal + 1
+        payload.id = this.props.restaurants.length + 1
         delete payload.open
         this.props.addRestaurant(payload)
         this.setState({ open: false })
