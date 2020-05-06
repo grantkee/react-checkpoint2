@@ -23,10 +23,10 @@ export const addRestaurant = (restaurant) => {
     }
 }
 
-export const removeRestaurant = (index) => {
+export const removeRestaurant = (id) => {
     return {
         type: 'REMOVE_RESTAURANT',
-        value: index
+        value: id
     } 
 }
 
